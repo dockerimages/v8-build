@@ -7,6 +7,6 @@ ENV PATH="/build/depot_tools:${PATH}"
 RUN gclient
 RUN fetch v8
 WORKDIR /build/v8
-RUN git checkout branch-heads/8.8 > COMMIT
+RUN git checkout branch-heads/8.8 &> COMMIT
 RUN cat ./COMMIT
 #RUN exit 1
