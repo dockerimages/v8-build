@@ -9,5 +9,6 @@ RUN fetch v8
 WORKDIR /build/v8
 RUN git checkout branch-heads/8.8 &> COMMIT
 RUN cat ./COMMIT
+RUN gclient sync
 LABEL org.opencontainers.image.source="https://github.com/dockerimages/v8-build"
 #RUN exit 1
